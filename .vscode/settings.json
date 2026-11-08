@@ -3,9 +3,23 @@
     "wrangler.json": "jsonc"
   },
   "files.eol": "\n",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // 保存時に Prettier で整形し、ESLint の自動修正も適用する
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
-  }
+  },
+
+  // ユーザー設定で言語ごとに別のフォーマッターが指定されていても Prettier を使う
+  "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // ESLint 拡張で .vue ファイルも検査する
+  "eslint.validate": ["javascript", "typescript", "vue"]
 }
