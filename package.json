@@ -9,7 +9,11 @@
     "preview": "npm run build && wrangler dev",
     "postinstall": "nuxt prepare",
     "deploy": "npm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "nuxt": "^4.6.4",
@@ -17,9 +21,13 @@
     "vue-router": "^5.4.0"
   },
   "devDependencies": {
+    "@nuxt/eslint": "^1.0.0",
     "@types/node": "^26.6.6",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "nitro-cloudflare-dev": "^0.2.2",
     "nitropack": "^2.13.6",
+    "prettier": "^3.0.0",
     "wrangler": "^4.158.0"
   }
 }

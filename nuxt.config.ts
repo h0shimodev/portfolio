@@ -10,21 +10,20 @@ export default defineNuxtConfig({
     },
   },
 
-
   // 任意: 全ページを事前生成して静的ファイルとして配信
   // (フォームはブラウザから直接送信するので、サーバー処理は不要です)
   routeRules: {
     '/**': { prerender: true },
   },
-  
+
   nitro: {
-    preset: "cloudflare_module",
+    preset: 'cloudflare_module',
 
     cloudflare: {
       deployConfig: true,
-      nodeCompat: true
-    }
+      nodeCompat: true,
+    },
   },
 
-  modules: ["nitro-cloudflare-dev"]
+  modules: ['nitro-cloudflare-dev', '@nuxt/eslint'],
 })
