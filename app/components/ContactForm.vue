@@ -11,9 +11,7 @@ const errorMessage = ref('')
 
 // 無料の hCaptcha を使うための Web3Forms 公式スクリプト
 useHead({
-  script: [
-    { src: 'https://web3forms.com/client/script.js', async: true, defer: true },
-  ],
+  script: [{ src: 'https://web3forms.com/client/script.js', async: true, defer: true }],
 })
 
 async function onSubmit(event: Event) {
@@ -53,13 +51,7 @@ async function onSubmit(event: Event) {
     <input type="hidden" name="from_name" value="Portfolio Site" />
 
     <!-- ハニーポット: 人間には見えない。ボットがチェックすると弾かれる -->
-    <input
-      type="checkbox"
-      name="botcheck"
-      class="botcheck"
-      tabindex="-1"
-      autocomplete="off"
-    />
+    <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
 
     <label>
       お名前
